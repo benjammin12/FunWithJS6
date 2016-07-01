@@ -14,11 +14,12 @@ function bankAccount(name, savings){
 
 var Johnny = new bankAccount("John Smith", 5000);
 
-document.write(Johnny.getInfo());
+//document.write(Johnny.getInfo()) , `<br><hr>`;
 
 
 class BankAccount {
-    BankAccount(name,savings,monthlyFee){
+
+    constructor(name,savings,monthlyFee){
         this.name = name;
         this.savings = savings;
         this.monthlyFee = monthlyFee;
@@ -45,17 +46,25 @@ class BankAccount {
     }
 
     applyFee(){
-        savings -= monthlyFee;
+
+        return this.savings -= this.monthlyFee;
     }
 }
-
+    
 var Ben = new BankAccount('Benjammin', 400, 5);
 
+//document.write(Ben.getInfo() , `<br /> `);
 
 
-function getUserName(name) {
-    var aName = document.getElementsByClassName(name);
-    $(".accountName").replace(Ben.getName());
-
+function displaySavings(name) {
+    savings.insertAdjacentHTML("afterbegin", name.getInfo());
 }
-    
+
+
+function hideSavings(){
+    $("#savings").hide();
+}
+
+Ben.setName("Chris");
+
+

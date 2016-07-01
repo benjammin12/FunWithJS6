@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <script type="text/javascript" src="js/test.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,9 +21,12 @@
 </head>
 <body>
 
-<div class="container accountName">
-    
-<h1>Account Name: </h1>
+<div class="container">
+
+    <h2>Ben's Info: </h2><h2 id="savings"></h2>
+    <button onclick="displaySavings(Ben)">Display Savings</button>
+    <button onclick="hideSavings()">Hide Savings</button>
+    <button onclick="Ben.applyFee()">Apply Fee</button>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
