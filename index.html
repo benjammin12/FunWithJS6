@@ -23,12 +23,35 @@
 
 <div class="container">
 
-    <h2>Ben's Info: </h2><h2 id="savings"></h2>
+    <h2 class="text-lg-center">Ben's Info: </h2><p id="savings"></p>
     <button onclick="displaySavings(Ben)">Display Savings</button>
     <button onclick="hideSavings()">Hide Savings</button>
     <button onclick="Ben.applyFee()">Apply Fee</button>
-</div>
 
+    <hr>
+
+    <h2 class="text-md-center">Calculate what you could save</h2>
+
+    <p>Enter an amount you spend every work day <br /> Example, you get a coffee everyday for $2</p>
+
+<form class="form-inline">
+    <div class="form-group">
+        <label class="sr-only" for="Amount">Amount (in dollars)</label>
+        <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="text" class="form-control" id="Amount" placeholder="Add a daily amount spent">
+        </div>
+    </div>
+    <button type="button" onclick="calcYearly()" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+    <p id="amntSaved"></p>
+
+
+
+</div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

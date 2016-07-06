@@ -44,9 +44,8 @@ class BankAccount {
     getInfo(){
         return this.getName() + ' has a total of $' + this.getSavings();
     }
-
+    
     applyFee(){
-
         return this.savings -= this.monthlyFee;
     }
 }
@@ -57,14 +56,24 @@ var Ben = new BankAccount('Benjammin', 400, 5);
 
 
 function displaySavings(name) {
+    if (savings != ""){
+        document.getElementById("savings").innerHTML = "";
+
+    }
     savings.insertAdjacentHTML("afterbegin", name.getInfo());
 }
-
-
 function hideSavings(){
     $("#savings").hide();
 }
 
-Ben.setName("Chris");
+function calcYearly(){
+    var amt =  document.getElementById("Amount").value;
+
+    document.getElementById('amntSaved').innerHTML = "You spend " + amt * 250 + " yearly.";
+
+}
+
+
+
 
 
