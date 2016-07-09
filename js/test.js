@@ -55,24 +55,33 @@ var Ben = new BankAccount('Benjammin', 400, 5);
 //document.write(Ben.getInfo() , `<br /> `);
 
 
-function displaySavings(name) {
-    if (savings != ""){
-        document.getElementById("savings").innerHTML = "";
+
+    function displaySavings(name) {
+        if (savings != "") {
+            document.getElementById("savings").innerHTML = "";
+
+        }
+        savings.insertAdjacentHTML("afterbegin", name.getInfo());
+    }
+
+    function hideSavings() {
+        $("#savings").hide();
+    }
+
+    var amt = 0;
+
+    function calcYearly() {
+        var amt = document.getElementById("Amount").value;
+        amt = amt * 260;
+
+        document.getElementById('amntSaved').innerHTML = "You spend " + amt + " yearly.";
 
     }
-    savings.insertAdjacentHTML("afterbegin", name.getInfo());
-}
-function hideSavings(){
-    $("#savings").hide();
-}
 
-function calcYearly(){
-    var amt =  document.getElementById("Amount").value;
 
-    document.getElementById('amntSaved').innerHTML = "You spend " + amt * 250 + " yearly.";
-
-}
-
+     if (amt != 0) {
+         document.getElementsByClassName('posSavings').innerHTML = "You could have saved " + amt + " so far";
+     }
 
 
 
