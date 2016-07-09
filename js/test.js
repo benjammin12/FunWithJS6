@@ -79,9 +79,10 @@ var Ben = new BankAccount('Benjammin', 400, 5);
     }
 
 
-     if (amt != 0) {
-         document.getElementsByClassName('posSavings').innerHTML = "You could have saved " + amt + " so far";
-     }
+
+    var ele = document.getElementById('posSavings');
+    ele.innerHTML = "Hello";
+
 
 
 
