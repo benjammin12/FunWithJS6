@@ -52,12 +52,10 @@ class BankAccount {
     
 var Ben = new BankAccount('Benjammin', 400, 5);
 
-//document.write(Ben.getInfo() , `<br /> `);
-
 
 
     function displaySavings(name) {
-        if (savings != "") {
+        if (savings !== "") {
             document.getElementById("savings").innerHTML = "";
 
         }
@@ -71,17 +69,16 @@ var Ben = new BankAccount('Benjammin', 400, 5);
     var amt = 0;
 
     function calcYearly() {
-        var amt = document.getElementById("Amount").value;
+        amt = document.getElementById("Amount").value;
         amt = amt * 260;
-
         document.getElementById('amntSaved').innerHTML = "You spend " + amt + " yearly.";
-
+        var ele = document.getElementById('posSavings');
+        ele.innerHTML = "You could have save " + (amt/2) + " per year, if you purchase this item every other day";
     }
 
 
 
-    var ele = document.getElementById('posSavings');
-    ele.innerHTML = "Hello";
+
 
 
 

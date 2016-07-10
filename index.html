@@ -21,9 +21,13 @@
 </head>
 <body>
 
-<div class="container">
-
+<div class="topHeader">
     <h2 class="text-lg-center">Ben's Info: </h2><p id="savings"></p>
+</div>
+
+<div class="container text-lg-center">
+        <div class="spendings">
+
     <button onclick="displaySavings(Ben)">Display Savings</button>
     <button onclick="hideSavings()">Hide Savings</button>
     <button onclick="Ben.applyFee()">Apply Fee</button>
@@ -32,17 +36,17 @@
 
     <h2 class="text-md-center">Calculate what you could save</h2>
 
-    <p>Enter an amount you spend every work day <br /> Example, you get a coffee everyday for $2</p>
+    <p class="exText">Enter an amount you spend every work day <br /> Example, you get a coffee everyday for $2</p>
 
 <form class="form-inline">
     <div class="form-group">
         <label class="sr-only" for="Amount">Amount (in dollars)</label>
         <div class="input-group">
             <div class="input-group-addon">$</div>
-            <input type="text" class="form-control" id="Amount" placeholder="Add a daily amount spent">
+            <input type="text" class="form-control" id="Amount" placeholder="Daily Amount">
         </div>
     </div>
-    <button type="button" onclick="calcYearly()" class="btn btn-primary">Submit</button>
+    <button class="isClicked" type="button" onclick="calcYearly()" class="btn btn-primary">Submit</button>
 </form>
 
 
@@ -50,7 +54,9 @@
     <p id="amntSaved"></p>
 
 
-        <p id="posSavings"> test </p>
+        <p id="posSavings"></p>
+
+            </div>
 
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

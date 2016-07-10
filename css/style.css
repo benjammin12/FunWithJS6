@@ -1,4 +1,23 @@
+.topHeader{
+    background-color: papayawhip;
+    width:100% !important;
+    height: 150px;
+    margin-bottom: 20px;
+    padding-top:50px;
+    text-align: center;
+}
+
 .container{
+
+}
+
+
+
+.exText{
+    color: grey;
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px;
 
 }
 
@@ -9,5 +28,9 @@
 }
 
 #savings:hover{
-    background-color: yellow;
+    background-color: white;
+}
+
+hr{
+    background-color:  papayawhip;
 }
