@@ -46,7 +46,9 @@ class BankAccount {
     }
     
     applyFee(){
-        return this.savings -= this.monthlyFee;
+       this.savings -= this.monthlyFee;
+        displaySavings(this);
+        return savings;
     }
 }
     
